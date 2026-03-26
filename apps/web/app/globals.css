@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #FFFFFF;
+  color: #1F1F1F;
+  font-family: 'Montserrat', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Headings Style */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: #1F1F1F;
+}
+
+/* Gold Accent */
+.gold-accent {
+  color: #F9B95C;
+}
+
+/* Elegant Stroke */
+.divider-elegant {
+  height: 1px;
+  background: linear-gradient(to right, transparent, #F9B95C, transparent);
+}
+
+/* Premium Hover Effect */
+.hover-lift {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hover-lift:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(249, 185, 92, 0.15);
+}
+
+/* From Uiverse.io by chase2k25 */
+.futuristic-pattern {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 1),
+    rgba(248, 248, 248, 0.98),
+    rgba(249, 185, 92, 0.16),
+    rgba(255, 255, 255, 1)
+  );
+  filter: url(#advanced-texture);
+}
+
+/* Text Animation */
+.fade-in-up {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
