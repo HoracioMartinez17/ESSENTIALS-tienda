@@ -47,9 +47,9 @@ export default function ProductDetails() {
       <div className="bg-cream/50 rounded-lg p-8 border border-gold-light/30 space-y-4">
         <div className="flex items-baseline gap-4">
           <span className="text-5xl font-serif text-gold">
-            ${price.toLocaleString()}
+            €{price.toLocaleString('es-ES')}
           </span>
-          <span className="text-charcoal/50 text-sm font-normal">USD</span>
+          <span className="text-charcoal/50 text-sm font-normal">EUR</span>
         </div>
         <p className="text-charcoal/60 font-normal text-sm">
           Precio final. Impuestos incluidos en checkout.

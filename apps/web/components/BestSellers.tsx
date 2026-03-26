@@ -50,7 +50,7 @@ const products: Product[] = [
 
 function ProductCard({ product }: { product: Product }) {
   return (
-    <div className="group">
+    <Link href="/product/details" className="group block h-full" aria-label={`Ver ${product.name}`}>
       <div className="relative mb-6 overflow-hidden rounded-lg bg-white border border-gold-light/20 aspect-square hover:border-gold transition-colors">
         <Image
           src={product.image}
@@ -86,14 +86,14 @@ function ProductCard({ product }: { product: Product }) {
 
         <div className="flex justify-between items-center pt-4 border-t border-gold-light/30">
           <span className="text-xl font-serif text-gold">{product.price}</span>
-          <button className="w-8 h-8 rounded-full border border-charcoal text-charcoal hover:border-gold hover:text-gold transition-colors inline-flex items-center justify-center">
+          <span className="w-8 h-8 rounded-full border border-charcoal text-charcoal group-hover:border-gold group-hover:text-gold transition-colors inline-flex items-center justify-center">
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 4v16m8-8H4" />
             </svg>
-          </button>
+          </span>
         </div>
       </div>
-    </div>
+    </Link>
   )
 }
 

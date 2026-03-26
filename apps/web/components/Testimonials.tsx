@@ -148,9 +148,11 @@ export default function Testimonials() {
                   ))}
                 </div>
 
-                <p className="text-charcoal/70 text-sm sm:text-base font-normal leading-relaxed mb-5 italic line-clamp-6 sm:line-clamp-none">
-                  &ldquo;{testimonial.text}&rdquo;
-                </p>
+                <div className="flex-1 mb-5 overflow-y-auto pr-1 [scrollbar-width:thin]">
+                  <p className="text-charcoal/70 text-sm sm:text-base font-normal leading-relaxed italic">
+                    &ldquo;{testimonial.text}&rdquo;
+                  </p>
+                </div>
 
                 <div className="border-t border-gold-light/30 pt-4 mt-auto">
                   <p className="font-serif text-charcoal">{testimonial.name}</p>
