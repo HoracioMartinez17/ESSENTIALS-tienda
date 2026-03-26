@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import Link from 'next/link'
 import { useMemo, useState } from 'react'
 
@@ -94,9 +95,11 @@ export default function CartPage() {
                   key={item.id}
                   className="grid grid-cols-[88px_1fr] sm:grid-cols-[110px_1fr_auto] gap-5 bg-white border border-gold-light/35 rounded-lg p-5"
                 >
-                  <img
+                  <Image
                     src={item.image}
                     alt={item.name}
+                    width={300}
+                    height={300}
                     className="w-full h-24 sm:h-28 object-cover rounded-md border border-gold-light/30"
                   />
 

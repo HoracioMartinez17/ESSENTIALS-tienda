@@ -27,7 +27,7 @@ export default function OrderSummary({ items, totals, showPayAction = false, onM
               <p className={`${mobile ? 'line-clamp-2' : ''} text-charcoal font-normal leading-snug`}>{item.name}</p>
               <p className="text-xs text-charcoal/55 font-normal">T: {item.size} · C: {item.quantity}</p>
             </div>
-            <p className="font-serif text-gold whitespace-nowrap">EUR{(item.unitPrice * item.quantity).toLocaleString('es-ES')}</p>
+            <p className="font-serif text-charcoal whitespace-nowrap">€{(item.unitPrice * item.quantity).toLocaleString('es-ES')}</p>
           </div>
         ))}
       </div>
@@ -37,15 +37,15 @@ export default function OrderSummary({ items, totals, showPayAction = false, onM
       <div className={`${mobile ? 'space-y-1 text-xs' : 'space-y-2 text-sm'} text-charcoal/80 font-normal`}>
         <div className="flex justify-between">
           <span>Subtotal</span>
-          <span>EUR{totals.subtotal.toLocaleString('es-ES', { minimumFractionDigits: 2 })}</span>
+          <span>€{totals.subtotal.toLocaleString('es-ES', { minimumFractionDigits: 2 })}</span>
         </div>
         <div className="flex justify-between">
           <span>{mobile ? 'Envio' : 'Envio estimado'}</span>
-          <span>{totals.shipping === 0 ? 'Gratis' : `EUR${totals.shipping.toLocaleString('es-ES', { minimumFractionDigits: 2 })}`}</span>
+          <span>{totals.shipping === 0 ? 'Gratis' : `€${totals.shipping.toLocaleString('es-ES', { minimumFractionDigits: 2 })}`}</span>
         </div>
         <div className="flex justify-between">
           <span>{mobile ? 'Impuestos' : 'Impuestos (IVA)'}</span>
-          <span>EUR{totals.taxes.toLocaleString('es-ES', { minimumFractionDigits: 2 })}</span>
+          <span>€{totals.taxes.toLocaleString('es-ES', { minimumFractionDigits: 2 })}</span>
         </div>
       </div>
 
@@ -54,7 +54,7 @@ export default function OrderSummary({ items, totals, showPayAction = false, onM
       <div className="flex items-center justify-between">
         <p className={`${mobile ? 'text-sm' : 'text-base'} text-charcoal font-normal`}>Total</p>
         <p className={`${mobile ? 'text-2xl' : 'text-3xl'} font-serif text-gold`}>
-          EUR{totals.total.toLocaleString('es-ES', { minimumFractionDigits: 2 })}
+          €{totals.total.toLocaleString('es-ES', { minimumFractionDigits: 2 })}
         </p>
       </div>
 
@@ -65,7 +65,7 @@ export default function OrderSummary({ items, totals, showPayAction = false, onM
           </button>
 
           <p className="text-xs text-charcoal/60 font-normal">
-            Al pulsar "Confirmar y pagar", se procesara una simulacion frontend. No se realizara ningun cargo real.
+            Al pulsar &quot;Confirmar y pagar&quot;, se procesara una simulacion frontend. No se realizara ningun cargo real.
           </p>
 
           {mobile && onMobileBack && (

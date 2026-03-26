@@ -33,7 +33,7 @@ export default function ConfirmationStep() {
       </div>
 
       <p className="text-xs text-charcoal/60 font-normal">
-        Al pulsar "Pagar ahora", se procesara una simulacion frontend. No se realizara ningun cargo real.
+        Al pulsar &quot;Pagar ahora&quot;, se procesara una simulacion frontend. No se realizara ningun cargo real.
       </p>
 
       <Link href="/cart" className="inline-flex items-center gap-2 text-sm font-normal text-charcoal hover:text-gold transition-colors">
